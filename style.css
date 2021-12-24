@@ -1,0 +1,173 @@
+/* custom CSS variables */
+:root{
+    /* fonts */
+    --font-family: 'Rubik', Arial, Helvetica, sans-serif;
+    --font-size: 18px;
+    /* colors */
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --soft-orange: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+
+.grid-col-span-2{
+    -ms-grid-column-span: 2;
+}
+.app-wrapper{
+    padding: 3em 1em;
+    min-height: 100vh;
+    background-color: var(--very-dark-blue);
+}
+.attribution {
+    margin: 2em auto 1em;
+    font-size: 11px;
+    text-align: center;  
+    color: #fff;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.grid-container{
+    margin: auto;
+    max-width: 1100px;
+}
+/* user interface */
+.user-interface {
+    margin: auto;
+    max-width: 420px;
+    grid-area: user;
+}
+.user-interface .user-info {
+    padding: 2em 1em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--desaturated-blue);
+}
+.user-interface .user-info .user-image{
+    margin-right: 1em;
+    width: 50px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.user-interface .time{
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--dark-blue);
+}
+.user-interface .time ul{
+    display: flex;
+    justify-content: space-around;
+}
+.user-interface .time ul li {
+    list-style: none;
+}
+.user-interface .time ul li button {
+    border-style: none;
+    background-color: transparent;
+    color: var(--desaturated-blue);
+    cursor: pointer;
+}
+.user-interface .time ul li button.active{
+    color: #fff;
+}
+
+/* time tracking component */
+.grid-container .tracking-component{
+   margin: 1em auto;
+   max-width: 420px;
+}
+.tracking-component .time-data {
+    padding: 1em;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-radius: 10px;
+    color: #fff;
+    background-color: var(--dark-blue);
+}
+.tracking-component .time-data .right-side{
+    text-align: right;
+}
+.tracking-component .time-data .right-side .dots{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.tracking-component .time-data .right-side .last{
+    margin-top: 25px;
+    display: block;
+}
+
+.grid-container .tracking-component .time-data span, img {
+    display: block;
+}
+.grid-container .tracking-component .color-bar{
+    height: 40px;
+    border-radius: 10px 10px 0 0;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+.grid-container .tracking-component:nth-child(2) .color-bar{
+    background-image: url(./images/icon-work.svg);
+    background-color: var(--light-red-work);
+    grid-area: work;
+}
+.grid-container .tracking-component:nth-child(3) .color-bar{
+    background-image: url(./images/icon-play.svg);
+    background-color: var(--soft-blue);
+    grid-area: play;
+}
+.grid-container .tracking-component:nth-child(4) .color-bar{
+    background-image: url(./images/icon-study.svg);
+    background-color: var(--light-red-study);
+    grid-area: study;
+}
+.grid-container .tracking-component:nth-child(5) .color-bar{
+    background-image: url(./images/icon-exercise.svg);
+    background-color: var(--lime-green);
+    grid-area: excercise;
+}
+.grid-container .tracking-component:nth-child(6) .color-bar{
+    background-image: url(./images/icon-social.svg);
+    background-color: var(--violet);
+    grid-area: social;
+}
+.grid-container .tracking-component:nth-child(7) .color-bar{
+    background-image: url(./images/icon-self-care.svg);
+    background-color: var(--soft-orange);
+    grid-area: self;
+}
+
+@media screen and (min-width:1025px){
+    .grid-container{
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-areas: 
+        "user work play study"
+        "user excercise social self";
+    }
+    .grid-container .tracking-component{
+        margin: 0 auto;
+    }
+
+}
