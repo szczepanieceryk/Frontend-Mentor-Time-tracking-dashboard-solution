@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -25,46 +24,93 @@
             </small>
             <br>
             <span class="user-name">
-              Jeremy Robson
+              <span class="name">
+                Jeremy
+              </span>
+              Robson
             </span>
           </span>
         </div>
         <div class="time">
           <ul>
             <li>
-              <button>
+              <button id="daily" class="time-select-btn active">
                 Daily
               </button>
             </li>
             <li>
-              <button>
+              <button id="weekly">
                 Weekly
               </button>
             </li>
             <li>
-              <button>
+              <button id="monthly">
                 Monthly
               </button>
             </li>
           </ul>
         </div>
       </div>
-
       <div class="tracking-component">
         <div class="color-bar"></div>
         <div class="time-data">
           <div class="left-side">
-            <span class="activity">
-              Work
+            <span class="activity" id="activity">
             </span>
-            <span class="hours">
-              5hrs
+            <span class="hours" id="hours">
             </span>
           </div>
           <div class="right-side">
             <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
-            <small class="last">
-              Previous - 7hrs
+            <small class="last" id="previous">
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="tracking-component">
+        <div class="color-bar"></div>
+        <div class="time-data">
+          <div class="left-side">
+            <span class="activity" id="activity">
+            </span>
+            <span class="hours" id="hours">
+            </span>
+          </div>
+          <div class="right-side">
+            <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+            <small class="last" id="previous">
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="tracking-component">
+        <div class="color-bar"></div>
+        <div class="time-data">
+          <div class="left-side">
+            <span class="activity" id="activity">
+            </span>
+            <span class="hours" id="hours">
+            </span>
+          </div>
+          <div class="right-side">
+            <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+            <small class="last" id="previous">
+            </small>
+          </div>
+        </div>
+      </div>
+      <div class="tracking-component">
+        <div class="color-bar"></div>
+        <div class="time-data">
+          <div class="left-side">
+            <span class="activity" id="activity">
+            </span>
+            <span class="hours" id="hours">
+            </span>
+          </div>
+          <div class="right-side">
+            <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+            <small class="last" id="previous">
             </small>
           </div>
         </div>
@@ -74,109 +120,159 @@
         <div class="color-bar"></div>
         <div class="time-data">
           <div class="left-side">
-            <span class="activity">
-              Work
+            <span class="activity" id="activity">
             </span>
-            <span class="hours">
-              5hrs
+            <span class="hours" id="hours">
             </span>
           </div>
           <div class="right-side">
             <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
-            <small class="last">
-              Previous - 7hrs
+            <small class="last" id="previous">
             </small>
           </div>
         </div>
       </div>
-
       <div class="tracking-component">
         <div class="color-bar"></div>
         <div class="time-data">
           <div class="left-side">
-            <span class="activity">
-              Work
+            <span class="activity" id="activity">
             </span>
-            <span class="hours">
-              5hrs
+            <span class="hours" id="hours">
             </span>
           </div>
           <div class="right-side">
             <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
-            <small class="last">
-              Previous - 7hrs
+            <small class="last" id="previous">
             </small>
           </div>
         </div>
       </div>
-
-      <div class="tracking-component">
-        <div class="color-bar"></div>
-        <div class="time-data">
-          <div class="left-side">
-            <span class="activity">
-              Work
-            </span>
-            <span class="hours">
-              5hrs
-            </span>
-          </div>
-          <div class="right-side">
-            <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
-            <small class="last">
-              Previous - 7hrs
-            </small>
-          </div>
-        </div>
-      </div>
-
-      <div class="tracking-component">
-        <div class="color-bar"></div>
-        <div class="time-data">
-          <div class="left-side">
-            <span class="activity">
-              Work
-            </span>
-            <span class="hours">
-              5hrs
-            </span>
-          </div>
-          <div class="right-side">
-            <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
-            <small class="last">
-              Previous - 7hrs
-            </small>
-          </div>
-        </div>
-      </div>
-
-      <div class="tracking-component">
-        <div class="color-bar"></div>
-        <div class="time-data">
-          <div class="left-side">
-            <span class="activity">
-              Work
-            </span>
-            <span class="hours">
-              5hrs
-            </span>
-          </div>
-
-          <div class="right-side">
-            <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
-            <small class="last">
-              Previous - 7hrs
-            </small>
-          </div>
-        </div>
-      </div>
-
     </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/szczepanieceryk">Eryk Szczepaniec</a>.
     </div>
   </div>
+  <script src="app.js"></script>
 </body>
 
 </html>
+
+
+<!-- <div class="tracking-component">
+  <div class="color-bar"></div>
+  <div class="time-data">
+    <div class="left-side">
+      <span class="activity" id="activity">
+      </span>
+      <span class="hours" id="hours">
+      </span>
+    </div>
+    <div class="right-side">
+      <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+      <small class="last" id="previous">
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="tracking-component">
+  <div class="color-bar"></div>
+  <div class="time-data">
+    <div class="left-side">
+      <span class="activity">
+        Play
+      </span>
+      <span class="hours" id="activity">
+        5hrs
+      </span>
+    </div>
+    <div class="right-side">
+      <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+      <small class="last">
+        Previous - 7hrs
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="tracking-component">
+  <div class="color-bar"></div>
+  <div class="time-data">
+    <div class="left-side">
+      <span class="activity">
+        Study
+      </span>
+      <span class="hours">
+        5hrs
+      </span>
+    </div>
+    <div class="right-side">
+      <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+      <small class="last">
+        Previous - 7hrs
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="tracking-component">
+  <div class="color-bar"></div>
+  <div class="time-data">
+    <div class="left-side">
+      <span class="activity">
+        Excercises
+      </span>
+      <span class="hours">
+        5hrs
+      </span>
+    </div>
+    <div class="right-side">
+      <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+      <small class="last">
+        Previous - 7hrs
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="tracking-component">
+  <div class="color-bar"></div>
+  <div class="time-data">
+    <div class="left-side">
+      <span class="activity">
+        Social
+      </span>
+      <span class="hours">
+        5hrs
+      </span>
+    </div>
+    <div class="right-side">
+      <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+      <small class="last">
+        Previous - 7hrs
+      </small>
+    </div>
+  </div>
+</div>
+
+<div class="tracking-component">
+  <div class="color-bar"></div>
+  <div class="time-data">
+    <div class="left-side">
+      <span class="activity">
+        Self Care
+      </span>
+      <span class="hours">
+        5hrs
+      </span>
+    </div>
+    <div class="right-side">
+      <img class="dots" src="./images/icon-ellipsis.svg" alt="dots">
+      <small class="last">
+        Previous - 7hrs
+      </small>
+    </div>
+  </div>
+</div> -->
